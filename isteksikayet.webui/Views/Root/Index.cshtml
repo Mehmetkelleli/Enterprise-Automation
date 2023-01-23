@@ -1,0 +1,128 @@
+﻿@model AdminIndexModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<section class="content mt-3">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+          <div class="col-lg-2 col-4">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>@Model.Users.Count()</h3>
+
+                <p>Kullanıcılar</p>
+              </div>
+              <div class="icon">
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-4">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>@Model.Departmants.Count()</h3>
+
+                <p>Departmanlar</p>
+              </div>
+              <div class="icon">
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-4">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>@Model.Complaints.Count()</h3>
+
+                <p>Talepler</p>
+              </div>
+              <div class="icon">
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-4">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>@Model.Complaints.Where(i=>i.Approval).ToList().Count()</h3>
+
+                <p>Cevaplanmayan Talepler</p>
+              </div>
+              <div class="icon">
+                
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+          <!-- ./col -->
+        </div>
+        <div class="row">
+        <div class="col-2"></div>
+
+        <div class="col-md-5">
+             @if(Model.Departmants.Count > 0)
+                    {
+                         <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Departman</th>
+                    <th>İşlemler</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach (var item in Model.Departmants)
+                 {
+                  <tr>
+                    <td>@item.Name</td>
+                    <td><a asp-controller="root" asp-action="DepartmantUpdate" asp-route-id="@item.Id"><button class=" btn btn-outline-warning">Update and Details</button></a></td>
+                    <td><a asp-controller="Root" asp-action="DepartmantDelete" asp-route-id="@item.Id"><button class=" btn btn-outline-danger">Delete</button></a></td>
+                  </tr>
+                 }
+                 
+                  </tbody>
+                </table>
+              </div>
+                    }
+        </div>
+        <div class="col-md-5">
+             @if(Model.Departmants.Count > 0)
+                    {
+                         <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Resim</th>
+                    <th>Ad Soyad</th>
+                    <th>Departman Adı</th>
+                    <th>Dahili</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach (var item in Model.Users.Where(i=>i.Root && i.Department.Id !=4 && i.Department.Id !=7 ))
+                 {
+                  <tr>
+                    <td><img src="~/files/@item.ImgUrl" width="50"></td>
+                    <td>@item.Name @item.LastName</td>
+                    <td>@item.Department.Name</td>
+                    <th>@item.LocalNumber</th>
+                    <td><a asp-controller="root" asp-action="UpdateUser" asp-route-id="@item.Id"><button class=" btn btn-outline-warning">Details</button></a></td>
+                  </tr>
+                 }
+                 
+                  </tbody>
+                </table>
+              </div>
+                    }
+        </div>
+            </div>
+            </div>
+   </section>

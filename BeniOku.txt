@@ -1,0 +1,17 @@
+1) Database Klasöründe bulunan databasi mssql aracılığı ile databasi aktar
+2) İsteksikayet.Data -> context -> DataContext sınıfındaki bağlantı stringini kendine göre ayarla
+3) Proje açıldğında 3 adet kullanıcı bulunmakadır Admin Personel Dışarı Kullanıcı
+--------------------------------------------------------------------------------------
+Root Kullanıcı   = Root@root.com
+Şifre            = Aslanlar123.
+------------------------------------------
+Normal Kullanıcı = Ahmet@root.com
+Şifre            = Aslanlar123.
+------------------------------------------
+Dışarı Kullanıcı = user@root.com
+Şifre            = Aslanlar123.
+
+
+Stajdan beri yapılan çalışmalari
+
+github.com/MehmetKelleli

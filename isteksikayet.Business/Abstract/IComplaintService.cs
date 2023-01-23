@@ -14,7 +14,10 @@ namespace isteksikayet.Business.Abstract
         List<Complaint> GetAll();
         Complaint GetById(int Id);
         void Delete(Complaint t);
-        List<Complaint> GetComplaintDepartment();
+        List<Complaint> GetComplaintDepartment(string UserId);
         Complaint GetComlaintDepartById(int id);
+        void ComplaintsReplay(Complaint Complaint, string Answer,string ReplyId);
+        List<Complaint> GetComplaintDepartmentAll();
+        Complaint GetByUser(int id);
     }
 }

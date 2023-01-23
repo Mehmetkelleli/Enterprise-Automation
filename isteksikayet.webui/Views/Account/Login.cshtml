@@ -1,0 +1,53 @@
+﻿@using Newtonsoft.Json
+@using isteksikayet.webui.Identity
+@model Sign
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+  <div class="card">
+    <div class="card-body login-card-body mt-2">
+    @if(TempData["Message"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Message"]</div>
+        }
+        
+      <form asp-controller="Account" asp-action="Login" method="post">
+        <div class="input-group mb-3">
+          <input asp-for="UserName" value="@Model.UserName" class="form-control" placeholder="E Postanızı Giriniz">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="Password" value="@Model.Password" class="form-control" placeholder="Sifrenizi Giriniz">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <!-- /.social-auth-links -->
+
+      <p class="mb-1">
+        <a asp-controller="account" asp-action="forgotpassword">Sifremi Unuttum</a>
+      </p>
+      <p class="mb-0">
+        <a asp-controller="account" asp-action="register" class="text-center">Kaydol</a>
+      </p>
+    </div>
+    <!-- /.login-card-body -->
+  </div>

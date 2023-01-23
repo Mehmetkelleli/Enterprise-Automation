@@ -1,0 +1,84 @@
+﻿@model Complaint
+@{
+    ViewData["Title"] = "ComplaintAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Görüş ve Şikayet Cevaplama</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-controller="root" asp-action="index">Home</a></li>
+                        <li class="breadcrumb-item active">Şikayet Ve Öneri</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form asp-controller="Root" asp-action="ComplaintsReplay" method="post" enctype="multipart/form-data">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Görüşü Belirten Kişi</label>
+                                            <input type="text" disabled class="form-control" value="@Model.User.Name @Model.User.LastName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ad</label>
+                                    <input type="hidden" disabled asp-for="Id" class="form-control" value="@Model.Id">
+                                    <input asp-for="Name" disabled class="form-control" placeholder="Şikayet İsmi Girin" value="@Model.Name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input asp-for="Description" disabled class="form-control" placeholder="Şikayet Açıklması Girin" value="@Model.Description">
+                                    <input type="hidden" asp-for="UserId" value="@Model.UserId">
+                                </div>
+                                <div class="form-group">
+                                    <label>Sikayet Öneri Dosyası</label>
+                                    <input type="hidden" value="@Model.FileUrl" class="form-control">
+                                    <input type="file" name="File">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Departman</label>
+                                    <select asp-for="DepartmentId" asp-items="@ViewBag.Department" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="form-control" name="Answer" id="editor"></textarea>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+

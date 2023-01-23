@@ -1,0 +1,100 @@
+﻿@model RoleDetails
+@{
+    ViewData["Title"] = "RoleDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if(TempData["Message"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Message"]</div>
+        }
+<form asp-controller="Root" asp-action="RoleUpdate" method="post" enctype="multipart/form-data">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Role Güncelleme  ve Detaylar</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a asp-controller="Root" asp-action="index">Anasayfa</a></li>
+              <li class="breadcrumb-item active">Role Detay</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              
+              <!-- /.card-header -->
+              <!-- form start -->
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Role Adı</label>
+                    <input asp-for="Role.Name" class="form-control" placeholder="Role Adı Ekle" value="@Model.Role.Name">
+                    <input asp-for="Role.Id" class="form-control" type="hidden" value="@Model.Role.Id">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Gönder</button>
+                </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <div class="col-md-6">
+            <!-- general form elements -->
+           <div class="card card-primary">
+                <div class="card-body">
+                        <h5 class="mt-2">Role Ait Olmayan Kullanıcılar</h5>
+                        <table class="table">
+                                    
+                                    
+                                        @foreach (var item in Model.NonMermbers)
+                           {
+                               <tr>
+                                <td>@item.Name @item.LastName</td>
+                                <td>@item.Email</td>
+                                <td><input type="checkbox" name="MembersAdd" value="@item.Id"></td>
+                               </tr>
+                           }
+                                </table>
+                        <h5>Role Ait Kullanıcılar</h5>
+                        <table class="table">
+                            
+                                   
+                                        @foreach (var item in Model.Members)
+                           {
+                               <tr>
+                                <td>@item.Name @item.LastName</td>
+                                <td>@item.Email</td>
+                                <td><input type="checkbox" name="MembersDelete" value="@item.Id"></td>
+                               </tr>
+                           }
+                          
+                        </table>
+                  
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+              </form>
+
+

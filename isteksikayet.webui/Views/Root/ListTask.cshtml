@@ -1,0 +1,91 @@
+﻿@model List<isteksikayet.Entity.Task>
+@{
+    ViewData["Title"] = "ListTask";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>DataTables</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Ansayfa</a></li>
+              <li class="breadcrumb-item active">İş Listesi</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <!-- /.card -->
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">İş Listesi</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>İş Başlık</th>
+                    <th>Departman</th>
+                    <th>İşi Veren</th>
+                    <th>İş Eki Dosyası</th>
+                    <th>iş Durumu</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                      @foreach (var item in Model)
+                     {
+                       <tr>
+                           <td>@item.Id</td>
+                           <td>@item.Title</td>
+                           <td>@item.Department.Name</td>
+                           <td>@item.CreatedUser.Name @item.CreatedUser.LastName</td>
+                           <td>@if(!string.IsNullOrEmpty(item.FileUrl)){
+                                                    <a href="~/files/@item.FileUrl"><button class="btn btn-success">İncele</button></a>
+                               }@if(string.IsNullOrEmpty(item.FileUrl)){
+                               <button class="btn btn-danger">Dosya yok</button>
+                               }</td>
+                                            <td>@if (item.State == state.Waiting)
+                                                {
+                                                    <p class="text-danger">Beklemede</p>
+                                                }@if (item.State == state.Task)
+                                                {
+                                                    <p class="text-warning">İşlemde</p>
+                                                }@if (item.State == state.Ok)
+                                                {
+                                                    <p class="text-danger">İş Tamamlandı</p>
+                                                }</td>
+                            <td>
+                                <a class="btn btn-info" asp-controller="root" asp-action="DetailTask" asp-route-id="@item.Id">İncele</a>
+                            </td>
+                       </tr>  
+                     }
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>

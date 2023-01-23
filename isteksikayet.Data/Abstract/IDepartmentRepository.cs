@@ -9,5 +9,6 @@ namespace isteksikayet.Data.Abstract
 {
     public interface IDepartmentRepository:IGenericRepository<Department>
     {
+        Department GetByIdWidthDepartmant(int id);
     }
 }

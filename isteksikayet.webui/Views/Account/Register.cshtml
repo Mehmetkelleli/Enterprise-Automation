@@ -1,0 +1,90 @@
+﻿@using isteksikayet.webui.Models
+@model Register
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+  <div class="card">
+    <div class="card-body login-card-body mt-2">
+
+    @if(TempData["Message"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Message"]</div>
+        }
+      <form asp-controller="Account" asp-action="Register" method="post"enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <input asp-for="Name" value="@Model.Name" class="form-control" placeholder="Ad">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        <span class="text text-danger" asp-validation-for="Name"></span>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="LastName" value="@Model.LastName" class="form-control" placeholder="Soyad">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+          <span class="text text-danger " asp-validation-for="LastName"></span>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="UserName" value="@Model.UserName" class="form-control" placeholder="Kullanıcı Adı">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        <span class="text text-danger" asp-validation-for="UserName"></span>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="EMail" value="@Model.EMail" class="form-control" placeholder="E Posta">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+          <span class="text text-danger" asp-validation-for="EMail"></span>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="ImgUrl" value="aaaa" class="form-control" type="hidden">
+          <input type="file" name="FileImg" class="form-control">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="Password" value="@Model.Password" class="form-control" placeholder="Lütfen Şifrenizi Giriniz">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+          <span class="text text-danger"  asp-validation-for="Password"></span>
+        </div>
+        <div class="input-group mb-3">
+          <input asp-for="Repassword" value="@Model.Repassword" class="form-control" placeholder="Lütfen Şifrenizi tekrar Ediniz">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+          <span class="text text-danger" asp-validation-for="Repassword"></span>
+        </div>
+        <div class="row">
+          <div class="col-8">
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Kaydol</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.login-card-body -->
+  </div>

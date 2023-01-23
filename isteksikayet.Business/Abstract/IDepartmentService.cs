@@ -14,5 +14,6 @@ namespace isteksikayet.Business.Abstract
         List<Department> GetAll();
         Department GetById(int Id);
         void Delete(Department t);
+        Department GetByIdWidthDepartmant(int id);
     }
 }

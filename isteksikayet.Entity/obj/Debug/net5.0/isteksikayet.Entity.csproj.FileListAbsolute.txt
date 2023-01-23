@@ -1,12 +1,60 @@
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.deps.json
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.dll
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.pdb
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.AssemblyReference.cache
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfoInputs.cache
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfo.cs
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.deps.json
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.pdb
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.dll
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\refint\isteksikayet.Entity.dll
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.pdb
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\ref\isteksikayet.Entity.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.deps.json
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfo.cs
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\refint\isteksikayet.Entity.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\ref\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.deps.json
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\refint\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\ref\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.deps.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\refint\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Entity\obj\Debug\net5.0\ref\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.deps.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\refint\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Entity\obj\Debug\net5.0\ref\isteksikayet.Entity.dll

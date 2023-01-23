@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Business\\isteksikayet.Business.csproj": {}
+    "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Business\\isteksikayet.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Business\\isteksikayet.Business.csproj": {
+    "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Business\\isteksikayet.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Business\\isteksikayet.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Business\\isteksikayet.Business.csproj",
         "projectName": "isteksikayet.Business",
-        "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Business\\isteksikayet.Business.csproj",
+        "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Business\\isteksikayet.Business.csproj",
         "packagesPath": "C:\\Users\\Mehmet Kelleli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Business\\obj\\",
+        "outputPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Data\\isteksikayet.Data.csproj": {
-                "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Data\\isteksikayet.Data.csproj"
+              "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Data\\isteksikayet.Data.csproj": {
+                "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Data\\isteksikayet.Data.csproj"
               },
-              "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj": {
-                "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj"
+              "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj": {
+                "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj"
               }
             }
           }
@@ -56,7 +57,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -65,18 +67,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Data\\isteksikayet.Data.csproj": {
+    "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Data\\isteksikayet.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Data\\isteksikayet.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Data\\isteksikayet.Data.csproj",
         "projectName": "isteksikayet.Data",
-        "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Data\\isteksikayet.Data.csproj",
+        "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Data\\isteksikayet.Data.csproj",
         "packagesPath": "C:\\Users\\Mehmet Kelleli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Data\\obj\\",
+        "outputPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,14 +93,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj": {
-                "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj"
+              "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj": {
+                "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj"
               }
             }
           }
@@ -113,6 +116,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -136,7 +143,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -145,18 +153,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj": {
+    "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj",
         "projectName": "isteksikayet.Entity",
-        "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\isteksikayet.Entity.csproj",
+        "projectPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\isteksikayet.Entity.csproj",
         "packagesPath": "C:\\Users\\Mehmet Kelleli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\myblog\\isteksikayet\\isteksikayet.Entity\\obj\\",
+        "outputPath": "C:\\Users\\Mehmet Kelleli\\Desktop\\Web Ui Files\\isteksikayetkurumotomasyonu\\isteksikayet.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -171,6 +179,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -188,13 +197,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -203,7 +219,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

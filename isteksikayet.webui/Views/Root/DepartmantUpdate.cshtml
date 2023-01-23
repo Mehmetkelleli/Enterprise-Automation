@@ -1,0 +1,230 @@
+﻿@model DepartmantAddRoot
+@{
+    ViewData["Title"] = "ComplaintAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>@Model.Department.Name</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a asp-controller="Root" asp-action="index">Home</a></li>
+              <li class="breadcrumb-item active">Departman Güncelle</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-4">
+                    <!-- small box -->
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>@Model.Users.Count()</h3>
+
+                            <p>Personel Sayısı</p>
+                        </div>
+                        <div class="icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-2 col-4">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>@Model.Tasks.Select(i=>i.State == state.Waiting).Count()</h3>
+
+                            <p>Yapılacak İşler</p>
+                        </div>
+                        <div class="icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-2 col-4">
+                    <!-- small box -->
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h3>@Model.Department.Complaint.Where(i=>i.Approval != true).Count()</h3>
+
+                            <p>Cevaplanmayan Talepler</p>
+                        </div>
+                        <div class="icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <!-- ./col -->
+            </div>
+        <div class="row">
+          <!-- left column -->
+                           @foreach (var item in Model.Users)
+                        {
+                            @if (item.Root)
+                            {             <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+
+                        <!-- /.card-header -->
+                        <!-- form start -->
+
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <h5 for="exampleInputEmail1">Birim Yöneticisi</h5>
+                                        <img width="50" src="~/files/@item.ImgUrl">
+                                        <hr>
+                                        <p>@item.Name @item.LastName</p>
+                                        <p class="text-muted">@item.LocalNumber</p>
+                                    </div>
+                                </div>
+                                
+                        <!-- /.card-body -->
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+           }}     
+          @foreach(var item in Model.Users){
+              if((item.Root == true && item.UserName == User.Identity.Name) || User.IsInRole("Admin") ){
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form asp-controller="Root" asp-action="DepartmantUpdate" method="post" enctype="multipart/form-data">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">İsim</label>
+                                            <img type="hidden" name="Id" value="@Model.Department.Id">
+                                            <input asp-for="Department.Name" class="form-control" value="@Model.Department.Name">
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary">Güncelle</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+                        </div>
+
+                    }
+                    break;
+                }
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+
+                        <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <Table class="table">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <td>İş Adı</td>
+                                                <td>İş Veren</td>
+                                                <td>İş Durum</td>
+                                                <td>İşlem</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.Tasks)
+                                           {
+                                             <tr>
+                                                 <td>@item.Title</td>
+                                                 <td>@item.CreatedUser.Name</td>
+                                                 <td>@item.State</td>
+                                                 <td><a asp-controller="root" asp-action="DetailTask" asp-route-id="@item.Id"><button class="btn btn-success">İncele</button></a></td>
+                                             </tr>  
+                                           }
+                                        </tbody>
+                                    </Table>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                
+               
+          <!--/.col (right) -->
+          <div class="col-md-12">
+              <h3 class="mb-2">Departmana Ait Geri Dönüşler</h3>
+               <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>File Url</th>
+                    <th>Approva</th>
+                    <th>Process</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach (var item in Model.Department.Complaint.ToList())
+                 {
+                  @if(item.Approval==false){
+                   <tr>
+                    <td>@item.Name</td>
+                    <td><a href="~/Files/@item.FileUrl">@(@item.FileUrl==null?"No File":"open")</a></td>
+                    <td><p class="btn btn-outline-@(item.Approval==true?"success":"danger")">@(item.Approval==true?"True":"False")</p></td>
+                    <td><a asp-controller="Root" asp-action="ComplaintsReplay" asp-route-id="@item.Id"><button class=" btn btn-outline-warning">Cevapla</button></a></td>
+                  </tr>
+                  }
+                  
+                 }
+                 
+                  </tbody>
+                </table>
+          </div>
+        </div>
+        <!-- /.row -->
+            <div class="row">
+                @foreach (var item in Model.Users)
+                {
+                    <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                        <div class="card bg-light d-flex flex-fill">
+                            <div class="card-header text-muted border-bottom-0">
+                                @item.Department.Name
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p class="text-bold">@item.Name @item.LastName</p>
+                                        <p>Dahili : @item.LocalNumber</p>
+                                    </div>
+                                    <div class="col-5 text-center">
+                                        <img src="~/files/@item.ImgUrl" alt="user-avatar" class="img-circle img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-right">
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-controller="root" asp-action="UpdateUser" asp-route-id="@item.Id" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Kişiyi Görüntüle
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+

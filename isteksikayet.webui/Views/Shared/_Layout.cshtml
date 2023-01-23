@@ -1,4 +1,17 @@
-﻿<!DOCTYPE html>
+﻿
+@using System.Text.Json
+@using Microsoft.AspNetCore.Http
+@using isteksikayet.webui.Identity
+@inject IHttpContextAccessor Accessor
+
+@{
+    var user = new User { };
+    if(TempData["User"] != null)
+    {
+        user =  JsonSerializer.Deserialize<User>(TempData["User"] as string);
+    }
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,6 +32,9 @@
   <link rel="stylesheet" href="~/root/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="~/root/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  
+ 
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="~/root/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -31,7 +47,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="~/root/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="~/root/dist/img/Betizm-Sikayet.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -42,10 +58,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="index3.html" class="nav-link">Anasayfa</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">İletişim</a>
       </li>
     </ul>
 
@@ -73,99 +89,14 @@
         </div>
       </li>
 
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="~/root/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="~/root/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="~/root/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link" asp-controller="Account" asp-action="LogOut">
+          Log Out
         </a>
       </li>
     </ul>
@@ -176,53 +107,101 @@
   <aside class="main-sidebar sidebar-light-pink elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="~/root/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <img src="~/root/dist/img/Betizm-Sikayet.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Destek Talep</span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="~/root/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
+      @await Component.InvokeAsync("SideBar")
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item">
+          <!-- Add icons to the links using the .nav-icon class-->
+                        @if(User.IsInRole("Admin") || User.IsInRole("Personel")){
+                            <li class="nav-item">
+                                <a asp-controller="Root" asp-action="index" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Anasayfa
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
             <a asp-controller="Home" asp-action="index" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Anasayfa
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
            </li>
+                        }
+
+           @if(User.IsInRole("Admin") || User.IsInRole("Personel")){
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="nav-icon fa-solid fa-code-merge"></i>
+              <p>
+                Departman İşlemleri
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              @if(User.IsInRole("Admin") || user.Active == true){
+                  <li class="nav-item">
+                <a asp-controller="Root" asp-action="DepartmantAdd"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Departman Ekle</p>
+                </a>
+              </li>
+              }
+              <li class="nav-item">
+                <a asp-controller="root" asp-action="DepartmantList"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Departman Liste</p>
+                </a>
+              </li>
+            </ul>
+           </li>
+           @if(User.IsInRole("Admin") || user.Active){
            <li class="nav-item">
             <a class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fa-solid fa-code-merge"></i>
               <p>
-                Complaint Process
+                Kurum İşlemleri
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a asp-controller="Root" asp-action="AddTask"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Yapılacak İş Ekle</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a asp-controller="root" asp-action="ListTask"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>İşleri Listele</p>
+                </a>
+              </li>
+            </ul>
+           </li>}
+           }
+           <li class="nav-item">
+            <a class="nav-link">
+              <i class="nav-icon fa-solid fa-file-signature"></i>
+              <p>
+                Tamamlanan Şikayetler
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -230,23 +209,93 @@
               <li class="nav-item">
                 <a asp-controller="Home" asp-action="ComplaintAdd"  class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Complaint Add</p>
+                  <p>Şikayet Ekle</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a asp-controller="Home" asp-action="ComplaintList"  class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Complaint List</p>
+                  <p>Şikayet Listele</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a asp-controller="Home" asp-action="AprovedComplaint"  class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Approved Complaint</p>
+                  <p>Onaylanan Şikayetler</p>
                 </a>
               </li>
             </ul>
            </li>
+           @if(User.IsInRole("Admin") || User.IsInRole("Personel")){
+                            <li class="nav-item">
+                                <a asp-controller="Root" asp-action="GetContact" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Personel Rehberi
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                            </li>
+                        }
+                        @if(User.IsInRole("Admin")){
+                            <li class="nav-item">
+            <a class="nav-link">
+              <i class="nav-icon fa-solid fa-key"></i>
+              <p>
+                Kullanıcı İşlemleri
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a asp-controller="Root" asp-action="CreateUser"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kullanıcı Ekle</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a asp-controller="Root" asp-action="GetUsers"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kullanıcılar</p>
+                </a>
+              </li>
+            </ul>
+           </li>
+                        }
+           @if(User.IsInRole("Admin")){
+               <li class="nav-item">
+            <a asp-controller="root" asp-action="Setting" class="nav-link">
+              <i class="nav-icon fa-solid fa-screwdriver-wrench"></i>
+              <p>
+                Site Ayarları
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link">
+              <i class="nav-icon fa-solid fa-key"></i>
+              <p>
+                İzinler
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a asp-controller="Root" asp-action="RoleAdd"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Role Ekle</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a asp-controller="Root" asp-action="RoleList"  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Roller Listesi</p>
+                </a>
+              </li>
+            </ul>
+           </li>
+           }
 
         </ul>
       </nav>
@@ -256,6 +305,10 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Message"]</div>
+        }
     @RenderBody()
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -276,6 +329,44 @@
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
+</script>
+<script src="~/root/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/root/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="~/root/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/root/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/root/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/root/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/root/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/root/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/root/plugins/jszip/jszip.min.js"></script>
+<script src="~/root/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="~/root/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="~/root/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/root/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/root/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 <!-- Bootstrap 4 -->
 <script src="~/root/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -303,5 +394,17 @@
 <script src="~/root/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="~/root/dist/js/pages/dashboard.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+             <script>
+                        ClassicEditor
+                                .create( document.querySelector( '#editor' ) )
+                                .then( editor => {
+                                        console.log( editor );
+                                } )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
+                </script>
 </body>
 </html>

@@ -1,36 +1,64 @@
 ﻿using isteksikayet.Business.Abstract;
 using isteksikayet.Entity;
+using isteksikayet.webui.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.IO;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace isteksikayet.webui.Controllers
 {
+    [Authorize]
+    [AutoValidateAntiforgeryToken]
     public class HomeController : Controller
     {
         private IComplaintService _Complaint;
         private IDepartmentService _Department;
-        public HomeController(IComplaintService Complaint, IDepartmentService Department)
+        private UserManager<User> _User;
+        
+        public HomeController(IComplaintService Complaint, IDepartmentService Department, UserManager<User> user)
         {
             _Complaint = Complaint;
             _Department = Department;
+            _User = user;
+            
+
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
+            if (User.IsInRole("Admin"))
+            {
+                return RedirectToAction("index","root");
+            }
+            return View(_Complaint.GetComplaintDepartment(users.Id));
         }
         //Comlaint List
-        public IActionResult ComplaintList()
+        public async Task<IActionResult> ComplaintList()
         {
-            return View(_Complaint.GetComplaintDepartment());
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
+            if (User.IsInRole("Admin"))
+            {
+                return View(_Complaint.GetComplaintDepartmentAll());
+            }
+            else
+            {
+                return View(_Complaint.GetComplaintDepartment(users.Id));
+            }
         }
         //Complaint Add
         [HttpGet]
-        public IActionResult ComplaintAdd()
+        public async Task<IActionResult> ComplaintAdd()
         {
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
             ViewBag.Department = new SelectList(_Department.GetAll(), "Id", "Name");
             return View(new Complaint { });
         }
@@ -39,6 +67,8 @@ namespace isteksikayet.webui.Controllers
         {
             if(File == null)
             {
+                var users = await _User.FindByNameAsync(User.Identity.Name);
+                TempData["User"] = JsonSerializer.Serialize(users);
                 _Complaint.Create(T);
                 return RedirectToAction("index");
             }
@@ -53,8 +83,10 @@ namespace isteksikayet.webui.Controllers
             return RedirectToAction("index");
         }
         [HttpGet]
-        public IActionResult ComplaintUpdate(int id)
+        public async Task<IActionResult> ComplaintUpdate(int id)
         {
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
             ViewBag.Department = new SelectList(_Department.GetAll(), "Id", "Name");
             return View(_Complaint.GetById(id));
         }
@@ -77,9 +109,11 @@ namespace isteksikayet.webui.Controllers
             return RedirectToAction("ComplaintList");
         }
         [HttpGet]
-        public IActionResult ComplaintDelete(int id)
+        public async Task<IActionResult> ComplaintDelete(int id)
         {
-            if(id == null)
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
+            if (id == null)
             {
                 return RedirectToAction("ComplaintList");
             }
@@ -88,14 +122,24 @@ namespace isteksikayet.webui.Controllers
             return RedirectToAction("ComplaintList");
         }
         [HttpGet]
-        public IActionResult ComplaintDetails(int id)
+        public async Task<IActionResult> ComplaintDetails(int id)
         {
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
             return View(_Complaint.GetComlaintDepartById(id));
         }
-        public IActionResult AprovedComplaint()
+        public async Task<IActionResult> AprovedComplaint()
         {
-            var Complaint = _Complaint.GetComplaintDepartment();
-            return View(Complaint);
+            var users = await _User.FindByNameAsync(User.Identity.Name);
+            TempData["User"] = JsonSerializer.Serialize(users);
+            if (User.IsInRole("Admin"))
+            {
+                return View(_Complaint.GetComplaintDepartmentAll());
+            }
+            else
+            {
+                return View(_Complaint.GetComplaintDepartment(users.Id));
+            }
         }
 
     }

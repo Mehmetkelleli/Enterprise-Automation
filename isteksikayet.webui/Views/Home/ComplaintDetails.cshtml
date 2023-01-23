@@ -10,11 +10,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Complaint Detail</h1>
+            <h1>Şikayet Detay</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a asp-controller="Home" asp-action="ComplainList">Complain List</a></li>
+              <li class="breadcrumb-item"><a asp-controller="Home" asp-action="ComplainList">Şikayet Listesi</a></li>
               <li class="breadcrumb-item active">Complain Detail</li>
             </ol>
           </div>
@@ -28,7 +28,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Complaint Detail</h3>
+          <h3 class="card-title">Görüş Detay</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -47,15 +47,15 @@
               <p class="text-muted">@Model.Description</p>
               <br>
               <div class="text-muted">
-                <p class="text-sm">Department
+                <p class="text-sm">Departman
                   <b class="d-block">@Model.Department.Name</b>
                 </p>
-                <p class="text-sm">My Name
-                  <b class="d-block">Name</b>
+                <p class="text-sm">Ad Soyad
+                  <b class="d-block">@Model.User.Name @Model.User.LastName</b>
                 </p>
               </div>
 
-              <h5 class="mt-5 text-muted">Project files</h5>
+              <h5 class="mt-5 text-muted">Şikayet Dosyası</h5>
               <ul class="list-unstyled">
                 <li>
                   <a href="~/Files/@Model.FileUrl" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i>@Model.FileUrl</a>
@@ -63,8 +63,8 @@
                 
               </ul>
               <div class="text-center mt-5 mb-3">
-                <a asp-controller="Home" asp-action="ComplaintUpdate" asp-route-id="@Model.Id" class="btn btn-sm btn-primary">Update</a>
-                <a asp-controller="Home" asp-action="ComplaintDelete" asp-route-id="@Model.Id" class="btn btn-sm btn-danger">Delete</a>
+                <a asp-controller="Home" asp-action="ComplaintUpdate" asp-route-id="@Model.Id" class="btn btn-sm btn-primary">Gücelle</a>
+                <a asp-controller="Home" asp-action="ComplaintDelete" asp-route-id="@Model.Id" class="btn btn-sm btn-danger">Sil</a>
               </div>
             </div>
                     @if (Model.Approval)
@@ -77,11 +77,11 @@
                 <p class="text-sm">Department
                   <b class="d-block">@Model.Department.Name</b>
                 </p>
-                <p class="text-sm">My Name
-                  <b class="d-block">Name</b>
+                <p class="text-sm">Cevaplayan Kişi
+                  <b class="d-block">@Model.ComplaintReply.User.Name @Model.ComplaintReply.User.LastName</b>
                 </p>
                 <br>
-                <h5>Answer</h5>
+                <h5>Cevap</h5>
                 <p class="text-muted">@Model.ComplaintReply.Description</p>
               </div>
             </div>

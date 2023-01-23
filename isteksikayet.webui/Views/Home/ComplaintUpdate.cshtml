@@ -1,7 +1,16 @@
-﻿@model Complaint
+﻿@using System.Text.Json
+@using isteksikayet.webui.Identity
+@model Complaint
 @{
-    ViewData["Title"] = "ComplaintAdd";
+    ViewData["Title"] = "Complaint Update";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var user = new User { };
+    if(TempData["User"] != null)
+    {
+        user =  JsonSerializer.Deserialize<User>(TempData["User"] as string);
+    }
 }
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -30,19 +39,20 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Complaint @Model.Name</h3>
+                <h3 class="card-title">Şikayet @Model.Name</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form asp-controller="Home" asp-action="ComplaintUpdate" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input asp-for="Name" class="form-control" placeholder="Enter Complaint Name" value="@Model.Name">
+                    <label for="exampleInputEmail1">E-posta Adresi</label>
+                    <input asp-for="Name" class="form-control" placeholder="Lütfen Şikayet İsmi Girin " value="@Model.Name">
+                    <input type="hidden" asp-for="UserId" value="@user.Id"></input>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Description</label>
-                    <input asp-for="Description" class="form-control" placeholder="Enter Complaint Description" value="@Model.Description">
+                    <label >Description</label>
+                    <textarea class="form-control" asp-for="Description" id="editor">@Model.Description</textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Complaint Contains File</label>
@@ -56,7 +66,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Gönder</button>
                 </div>
               </form>
             </div>

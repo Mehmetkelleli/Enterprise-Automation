@@ -36,6 +36,11 @@ namespace isteksikayet.Business.Concrete
             return _Department.GetById(Id);
         }
 
+        public Department GetByIdWidthDepartmant(int id)
+        {
+            return _Department.GetByIdWidthDepartmant(id);
+        }
+
         public void Update(Department t)
         {
             _Department.Update(t);

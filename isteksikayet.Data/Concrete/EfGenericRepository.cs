@@ -1,4 +1,5 @@
 ﻿using isteksikayet.Data.Abstract;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace isteksikayet.Data.Concrete
 {
     public class EfGenericRepository<T, TContext> : IGenericRepository<T>
         where T:class
-        where TContext:DbContext ,new()
+        where TContext:IdentityDbContext ,new()
     {
         public void Create(T t)
         {

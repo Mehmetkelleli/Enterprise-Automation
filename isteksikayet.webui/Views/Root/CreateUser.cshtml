@@ -1,0 +1,147 @@
+﻿@model AdminUserAddModel
+@{
+    ViewData["Title"] = "CreateUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+        <form asp-controller="Root" asp-action="createuser" method="Post" enctype="multipart/form-data">
+
+
+            @if (TempData["Message"] !=null){
+                <div class="alert alert-danger">@TempData["Message"]</div>
+            }
+            <div class="col-md-10 mt-3">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Kullanıcı Ekle</h3>
+                        <div class="alert alert-danger" asp-validation-summary="All"></div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- text input -->
+                                        <div class="form-group">
+                                            <label>Ad</label>
+                                            <input asp-for="Name" type="text" class="form-control" placeholder="Enter ..." value="@Model.Name">
+                                            <span asp-validation-for="Name" class="text-danger"></span>                
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- text input -->
+                                        <div class="form-group">
+                                            <label>Soyad</label>
+                                            <input asp-for="LastName" type="text" class="form-control" placeholder="Enter ..." value="@Model.LastName">
+                                            <span asp-validation-for="LastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Kullanıcı Adı</label>
+                                            <input asp-for="UserName" type="text" class="form-control" placeholder="Enter ..." value="@Model.UserName">
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>E Posta</label>
+                                            <input asp-for="EMail" type="text" class="form-control" placeholder="Enter ..." value="@Model.EMail">
+                                            <span asp-validation-for="EMail" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Local Telefon Numarası</label>
+                                            <input asp-for="LocalNumber" type="text" class="form-control" placeholder="Enter ..." value="@Model.LocalNumber">
+                                            <span asp-validation-for="LocalNumber" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Kullanıcı Resim</label>
+                                            <input asp-for="ImgUrl" class="form-control" value="@Model.ImgUrl">
+                                            <span asp-validation-for="ImgUrl" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Kullanıcı Sifre</label>
+                                            <input asp-for="Password" class="form-control" value="@Model.Password" placeholder="@Model.Password">
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Kullanıcı Onayı</label>
+                                            <input asp-for="Active" class="form-control" value="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Role Seç</label>
+
+                                            @foreach (var item in Model.Roles)
+                                            {
+                                                <input type="checkbox" name="roles" value="@item">
+                                                <label for="role">@item</label>
+
+                                                <br>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mt-4 col-sm-12">
+                                        <!-- textarea -->
+                                        <div class="form-group">
+                                            <label>Departman Seç</label>
+                                            <select asp-for="SelectDepartment">
+                                                @foreach (var item in Model.Departmants)
+                                                {
+                                                    <option value="@item.Id">@item.Name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-warning btn-md">Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                </div>
+
+        </form>
+    </div>
+   </div>
+

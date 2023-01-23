@@ -16,6 +16,12 @@ namespace isteksikayet.Business.Concrete
         {
             _Complaint = Complaint;
         }
+
+        public void ComplaintsReplay(Complaint Complaint, string Answer,string ReplyUserID)
+        {
+            _Complaint.ComplaintsReplay(Complaint, Answer,ReplyUserID);
+        }
+
         public void Create(Complaint t)
         {
             _Complaint.Create(t);
@@ -36,14 +42,24 @@ namespace isteksikayet.Business.Concrete
             return _Complaint.GetById(Id);
         }
 
+        public Complaint GetByUser(int id)
+        {
+            return _Complaint.GetByUser(id);
+        }
+
         public Complaint GetComlaintDepartById(int id)
         {
             return _Complaint.GetComlaintDepartById(id);
         }
 
-        public List<Complaint> GetComplaintDepartment()
+        public List<Complaint> GetComplaintDepartment(string UserId)
         {
-            return _Complaint.GetComplaintDepartment();
+            return _Complaint.GetComplaintDepartment(UserId);
+        }
+
+        public List<Complaint> GetComplaintDepartmentAll()
+        {
+            return _Complaint.GetComplaintDepartmentAll();
         }
 
         public void Update(Complaint t)

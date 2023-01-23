@@ -1,0 +1,53 @@
+﻿@model List<Department>
+@{
+    ViewData["Title"] = "DepartmantList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+        
+<section class="content mt-3">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-2"></div>
+          <div class="col-6">
+              @if (Model.Count == 0)
+    {
+    <div class="alert alert-danger"> Departman Yok</div>
+     }
+     @if(TempData["Message"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Message"]</div>
+        }
+            <div class="card">
+
+              <!-- /.card-header -->
+                    @if(Model.Count > 0)
+                    {
+                         <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Departman</th>
+                    <th>İşlemler</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach (var item in Model)
+                 {
+                  <tr>
+                    <td>@item.Name</td>
+                    <td><a asp-controller="root" asp-action="DepartmantUpdate" asp-route-id="@item.Id"><button class=" btn btn-outline-warning">Güncelle Ve Detay Gör</button></a></td>
+                    <td><a asp-controller="Root" asp-action="DepartmantDelete" asp-route-id="@item.Id"><button class=" btn btn-outline-danger">Sil</button></a></td>
+                  </tr>
+                 }
+                 
+                  </tbody>
+                </table>
+              </div>
+                    }
+                    <!-- /.card-body -->
+            </div>
+            </div>
+            </div>
+            </div>
+   </section>

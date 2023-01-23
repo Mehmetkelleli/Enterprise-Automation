@@ -1,7 +1,16 @@
-﻿@model Complaint
+﻿@using System.Text.Json
+@using isteksikayet.webui.Identity
+@model Complaint
 @{
     ViewData["Title"] = "ComplaintAdd";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var user = new User { };
+    if(TempData["User"] != null)
+    {
+        user =  JsonSerializer.Deserialize<User>(TempData["User"] as string);
+    }
 }
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -9,12 +18,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Complaint Add</h1>
+            <h1>Görüş Ve Şikayet Ekle</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Complaint </li>
+              <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+              <li class="breadcrumb-item active">Şikayet </li>
             </ol>
           </div>
         </div>
@@ -30,7 +39,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Complaint Add</h3>
+                <h3 class="card-title">Şikayet Ekle</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -38,25 +47,26 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input asp-for="Name" class="form-control" placeholder="Enter Complaint Name" value="@Model.Name">
+                    <input asp-for="Name" class="form-control" placeholder="Lütfen Şikayet İsmi Girin" value="@Model.Name">
+                    <input asp-for="UserId" value="@user.Id" type="hidden">
                   </div>
                   <div class="form-group">
-                    <label >Description</label>
-                    <input asp-for="Description" class="form-control" placeholder="Enter Complaint Description" value="@Model.Description">
+                    <label >Açıklma</label>
+                    <textarea class="form-control" asp-for="Description" id="editor">@Model.Description</textarea>
                   </div>
                   <div class="form-group">
-                    <label>Complaint Contains File</label>
+                    <label>Şikayet Dosyası</label>
                     <input type="hidden" value="@Model.FileUrl" class="form-control">
                     <input type="file" name="File">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Department</label>
+                    <label for="exampleInputEmail1">Departman</label>
                     <select asp-for="DepartmentId" asp-items="@ViewBag.Department" class="form-control"></select>
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Gönder</button>
                 </div>
               </form>
             </div>

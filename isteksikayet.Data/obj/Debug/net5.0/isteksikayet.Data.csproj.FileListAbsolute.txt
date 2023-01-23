@@ -1,3 +1,8 @@
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CoreCompileInputs.cache
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.deps.json
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.json
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.dev.json
@@ -5,14 +10,81 @@ C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.pdb
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.dll
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.pdb
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.AssemblyReference.cache
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfoInputs.cache
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfo.cs
-C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CoreCompileInputs.cache
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CopyComplete
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.dll
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\refint\isteksikayet.Data.dll
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.pdb
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.genruntimeconfig.cache
 C:\Users\Mehmet Kelleli\Desktop\myblog\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\ref\isteksikayet.Data.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.deps.json
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.json
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.dev.json
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfo.cs
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CopyComplete
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\refint\isteksikayet.Data.dll
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.genruntimeconfig.cache
+C:\Users\user\Downloads\isteksikayet\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\ref\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.deps.json
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.json
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.dev.json
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CopyComplete
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\refint\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.genruntimeconfig.cache
+C:\Users\Mehmet Kelleli\Desktop\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\ref\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.deps.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.dev.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CopyComplete
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\refint\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.genruntimeconfig.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayet\isteksikayet.Data\obj\Debug\net5.0\ref\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.deps.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.runtimeconfig.dev.json
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\bin\Debug\net5.0\isteksikayet.Entity.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.AssemblyReference.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfoInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.AssemblyInfo.cs
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.csproj.CopyComplete
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\refint\isteksikayet.Data.dll
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.pdb
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\isteksikayet.Data.genruntimeconfig.cache
+C:\Users\Mehmet Kelleli\Desktop\Web Ui Files\isteksikayetkurumotomasyonu\isteksikayet.Data\obj\Debug\net5.0\ref\isteksikayet.Data.dll
